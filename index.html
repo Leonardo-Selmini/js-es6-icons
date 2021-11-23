@@ -21,9 +21,9 @@
     </div>
     <div id="header-bottom">
       <label for="type-select">Categoria</label>
-      <select name="type-select" id="type-select">
+      <select id="type-select" name="type-select" onchange="select()" >
         <option value="all">All</option>
-        <option value="animals">Animals</option>
+        <option id="animals" value="animals">Animals</option>
         <option value="people">People</option>
         <option value="fruits">Fruits</option>
       </select>
