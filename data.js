@@ -113,24 +113,30 @@ const icons = [
 	}
 ];
 
+icons.forEach((element) => element.color = randomColor());
+
 select();
+
+
+
+
 
 // 00000000 FUNZIONI 00000000
 
+// serve per generare dinamicamente le icone all'interno del container in base al valore del select
 function select() {
 	const main = document.querySelector('main');
 	const mySelect = document.getElementById('type-select').value;
 
 	switch (mySelect) {
 		case 'animals':
-			console.log('animals');
 			main.innerHTML = '';
 			icons.filter((element) => {
 				if (element.type == 'animal') {
 					main.innerHTML += `
 					<div class="card">
 						<div class="icon-container">
-							<i class="${element.family} ${element.prefix}${element.name}"></i>
+							<i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color};" ></i>
 							<span class="icon-label">${element.name}</span>
 						</div>
 					</div>`
@@ -139,14 +145,13 @@ function select() {
 			break;
 
 		case 'fruits':
-			console.log('fruit');
 			main.innerHTML = '';
 			icons.filter((element) => {
 				if (element.type == 'fruit') {
 				main.innerHTML += `
 				<div class="card">
 					<div class="icon-container">
-						<i class="${element.family} ${element.prefix}${element.name}"></i>
+						<i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color};" ></i>
 						<span class="icon-label">${element.name}</span>
 					</div>
 				</div>`
@@ -155,14 +160,13 @@ function select() {
 			break;
 
 		case 'people':
-			console.log('people');
 			main.innerHTML = '';
 			icons.filter((element) => {
 				if (element.type == 'user') {
 				main.innerHTML += `
 				<div class="card">
 					<div class="icon-container">
-						<i class="${element.family} ${element.prefix}${element.name}"></i>
+						<i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color};" ></i>
 						<span class="icon-label">${element.name}</span>
 					</div>
 				</div>`
@@ -171,13 +175,12 @@ function select() {
 			break;
 
 		default:
-			console.log('all');
 			main.innerHTML = '';
 			icons.forEach((element) => {
 				main.innerHTML += `
 					<div class="card">
 						<div class="icon-container">
-							<i class="${element.family} ${element.prefix}${element.name}"></i>
+							<i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color};" ></i>
 							<span class="icon-label">${element.name}</span>
 						</div>
 					</div>
@@ -187,3 +190,12 @@ function select() {
 	}
 }
 
+// serve per generare un codice colore HEX a caso
+function randomColor() {
+	const character = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+	let newColor = '#';
+	for (let i = 0; i < 6; i++) {
+		newColor += character[Math.floor(Math.random() * (character.length))]; 
+	}
+	return newColor;
+}

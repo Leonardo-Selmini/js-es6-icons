@@ -17,7 +17,7 @@ body {
 
 #header-top h1 {
   font-size: 3rem;
-  color: #fafafa;
+  color: #ffffff;
   padding: 1.2rem 2rem;
 }
 
@@ -35,12 +35,19 @@ body {
 }
 
 #header-bottom select {
-  font-size: 1rem;
-  background-color: #8A897C;
-  color: #fafafa;
+  font-size: 1.2rem;
+  background-color: #FF9505;
+  color: #ffffff;
   margin-left: 1rem;
   padding: .6rem;
+  border: 2px solid transparent;
   border-radius: 10px;
+  outline: none;
+}
+
+#header-bottom select:hover {
+  filter: brightness(1.1);
+  border: 2px solid #E2711D;
 }
 
 /* 00000000 MAIN 00000000 */
@@ -50,7 +57,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #BDBBB0;
-  margin: 1.6rem auto;
+  margin: 2rem auto;
   padding: 1.4rem 0;
   border-radius: 40px;
 }
@@ -60,6 +67,13 @@ main {
   background-color: #fafafa;
   margin: 1.4rem;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 2px solid #fafafa;
+}
+
+.card:hover {
+  cursor: pointer;
+  border: 2px solid #E2711D;
 }
 
 .icon-container {
