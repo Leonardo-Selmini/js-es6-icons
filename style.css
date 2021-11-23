@@ -1,0 +1,80 @@
+/* commons */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #8A897C;
+}
+
+/* 00000000 HEADER 00000000 */
+#header-top {
+  background-color: #353535;
+}
+
+#header-top h1 {
+  font-size: 3rem;
+  color: #fafafa;
+  padding: 1.2rem 2rem;
+}
+
+#header-bottom {
+  background-color: #fafafa;
+  text-align: center;
+  padding: 1.2rem 0;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+#header-bottom label {
+  font-size: 1.4rem;
+  color: #353535;
+}
+
+#header-bottom select {
+  font-size: 1rem;
+  background-color: #8A897C;
+  color: #fafafa;
+  margin-left: 1rem;
+  padding: .6rem;
+  border-radius: 10px;
+}
+
+/* 00000000 MAIN 00000000 */
+main {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #BDBBB0;
+  margin: 1.6rem auto;
+  padding: 1.4rem 0;
+  border-radius: 40px;
+}
+
+.card {
+  width: calc(100% / 4 - 100px);
+  background-color: #fafafa;
+  margin: 1.4rem;
+  border-radius: 20px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4rem 0;
+}
+
+.icon-container i {
+  font-size: 3.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.icon-container .icon-label {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
